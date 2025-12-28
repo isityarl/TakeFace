@@ -11,3 +11,7 @@ class Embedder:
         with torch.no_grad():
             embedding = self.model(face_tensor)
         return embedding.cpu().numpy()[0]
+    
+if __name__=='__main__':
+    emb = Embedder()
+    xa = emb.get_embedding()
